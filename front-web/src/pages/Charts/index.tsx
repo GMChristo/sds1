@@ -12,13 +12,13 @@ type PieChartData = {
 }
 
 type BarChartData = {
-    x: string[];
-    y: number[];
+    x: string;
+    y: number;
 }
 
 const initialPieData = {
-    labels: [],
-    series: [],
+    labels: []
+    series: []
 }
 
 // const BASE_URL = 'http://localhost:8080'
@@ -35,7 +35,7 @@ const Charts = () => {
             const recordsResponse = await axios.get(`${BASE_URL}/records`);
             const gamesResponse = await axios.get(`${BASE_URL}/games`);
             
-            const barData = buildBarSeries(gamesResponse.data, recordsResponse.data.content);
+            const barData = buildBarSeries(gamesResponse.data, recordsResponse.data.content)
             setBarChartData(barData);
 
             const platformChartData = getPlatformChartData(recordsResponse.data.content);
