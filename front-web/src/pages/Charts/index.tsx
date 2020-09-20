@@ -17,7 +17,7 @@ type BarChartData = {
 }
 
 const initialPieData = {
-    labels: []
+    labels: [],
     series: []
 }
 
